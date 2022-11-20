@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Horario</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="crud2017.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="titulo">Horario de Mundial 2022</h1>
+        </header>
+
+        <nav class="columna2">
+            <ul>
+                <!--Si pulsamos en el enlace inicio, vuelve a llamar a esta pagina y se borran los
+                    registros que teniamos en la tabla horario-->
+                <li><a href="index.html">Inicio</a></li>
+
+                <li>Creación del Horario</li>
+                <li>Visualizar Horario</li>
+            </ul>
+
+        </nav>
+
+        <section class="columna1">
+            <article class="cajaarticulo">
+                <span class="labeltitulo1">Seleccion 1</span>
+                <div class="labelelemento1"><input type="text" id="cNombre" value="España" /></div>
+
+                <span class="labeltitulo2">Seleccion 2</span>
+                <div class="labelelemento2"><input type="text" id="cAsignatura" value="Costa Rica" /></div>
+
+                <span class="labeltitulo3">Dia de la Semana</span>
+                <div class="labelelemento3">
+                    <select id="cDias">
+                        <option value="1">Lunes</>
+                        <option value="2">Martes</>
+                        <option value="3">Miercoles</>
+                        <option value="4">Jueves</>
+                        <option value="5">Viernes</>
+                        <option value="6">Sabado</>
+                        <option value="7">Domingo</>
+                    </select>
+                </div>
+
+                <span class="labeltitulo4">Hora :</span>
+                <div class="labelelemento4">
+
+                    <select id="cHora">
+                        <option value="1">11 h.</>
+                        <option value="2">14 h.</>
+                        <option value="3">17 h.</>
+                        <option value="4">20 h.</>
+                    </select>
+
+
+                    <div class="labeltitulo5"></div>
+                    <div class="labelelemento5"><input type="button" id="bGrabar" value="Grabar" /></div>
+            </article>
+            <article class="cajaarticulo,  ">
+                <table style="border: #c610e6 solid 2px; width: 100%">
+                    <thead>
+                        <tr style="border: #999999 solid 3px">
+                            <th>Horario
+                            <th>
+                            <th style="border: #009999 solid 3px">Lunes</th>
+                            <th style="border: #009999 solid 3px">Martes</th>
+                            <th style="border: #009999 solid 3px">Miercoles</th>
+                            <th style="border: #009999 solid 3px">Jueves</th>
+                            <th style="border: #009999 solid 3px">Viernes</th>
+                            <th style="border: #009999 solid 3px">Sabado</th>
+                            <th style="border: #009999 solid 3px">Domingo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="border:  black solid 3px"> 8
+                            <td>
+                                <!--Aqui llamamos a la funcion visualizarMapa, cuando hacemos click en una 
+                                casilla de la tabla de l horario-->
+                            <td id="c11" style="border: #009999 solid 3px" onclick="visualizaMapa(this)"> </td>
+                            <td id="c12" style="border: #009999 solid 3px"> </td>
+                            <td id="c13" style="border: #009999 solid 3px"> </td>
+                            <td id="c14" style="border: #009999 solid 3px"> </td>
+                            <td id="c15" style="border: #009999 solid 3px"> </td>
+                            <td id="c16" style="border: #009999 solid 3px"> </td>
+                            <td id="c17" style="border: #009999 solid 3px"> </td>
+                        </tr>
+                        <tr>
+                            <td style="border:  black solid 3px"> 11
+                            <td>
+                            <td id="c21" style="border: #009999 solid 3px"> </td>
+                            <td id="c22" style="border: #009999 solid 3px"> </td>
+                            <td id="c23" style="border: #009999 solid 3px"> </td>
+                            <td id="c24" style="border: #009999 solid 3px"> </td>
+                            <td id="c25" style="border: #009999 solid 3px"> </td>
+                            <td id="c26" style="border: #009999 solid 3px"> </td>
+                            <td id="c27" style="border: #009999 solid 3px"> </td>
+                        </tr>
+                        <td style="border:  black solid 3px"> 14
+                        <td>
+                        <td id="c31" style="border: #009999 solid 3px"> </td>
+                        <td id="c32" style="border: #009999 solid 3px"> </td>
+                        <td id="c33" style="border: #009999 solid 3px"> </td>
+                        <td id="c34" style="border: #009999 solid 3px"> </td>
+                        <td id="c35" style="border: #009999 solid 3px"> </td>
+                        <td id="c36" style="border: #009999 solid 3px"> </td>
+                        <td id="c37" style="border: #009999 solid 3px"> </td>
+                        </tr>
+                        <td style="border:  black solid 3px"> 17
+                        <td>
+                        <td id="c41" style="border: #009999 solid 3px"> </td>
+                        <td id="c42" style="border: #009999 solid 3px"> </td>
+                        <td id="c43" style="border: #009999 solid 3px"> </td>
+                        <td id="c44" style="border: #009999 solid 3px"> </td>
+                        <td id="c45" style="border: #009999 solid 3px"> </td>
+                        <td id="c46" style="border: #009999 solid 3px"> </td>
+                        <td id="c47" style="border: #009999 solid 3px"> </td>
+                        </tr>
+                        <td style="border:  black solid 3px"> 20
+                        <td>
+                        <td id="c51" style="border: #009999 solid 3px"> </td>
+                        <td id="c52" style="border: #009999 solid 3px"> </td>
+                        <td id="c53" style="border: #009999 solid 3px"> </td>
+                        <td id="c54" style="border: #009999 solid 3px"> </td>
+                        <td id="c55" style="border: #009999 solid 3px"> </td>
+                        <td id="c56" style="border: #009999 solid 3px"> </td>
+                        <td id="c57" style="border: #009999 solid 3px"> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+
+        <aside class="columna3">
+            <blockquote>Horario Mundial de Qatar</blockquote>
+            <blockquote>El mundial de la verguenza</blockquote>
+            <blockquote class="twitter-tweet">
+                <p lang="es" dir="ltr">Héctor Bellerín, lateral del FC Barcelona: &quot;Como futbolista no estar en el
+                    Mundial de Qatar me entristece, pero hay una parte de mí que se alegra. No sé si lograría disfrutar
+                    de la carga de los 6.500 obreros fallecidos&quot;. Grande. <a
+                        href="https://t.co/FAcvt9SbMo">pic.twitter.com/FAcvt9SbMo</a></p>&mdash; Fonsi Loaiza
+                (@FonsiLoaiza) <a
+                    href="https://twitter.com/FonsiLoaiza/status/1593667779495870465?ref_src=twsrc%5Etfw">November 18,
+                    2022</a>
+            </blockquote>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </aside>
+        <footer class="columna4">
+            CIFP Santa Catalina &copy; 2022-2023
+        </footer>
+
+
+    </div>
+
+    <script src="funciones.js"></script>
+</body>
+
+</html>

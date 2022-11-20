@@ -1,0 +1,140 @@
+  /*Ahorcado*/
+input{
+    font-family: verdana ;
+    font-size: 24px;
+    color:#c610e6;
+}#caracter{width: 30px}
+
+.cajaarticulo{text-align: left;
+                display:  grid   ;
+                grid-gap:10px; 
+                grid-template-rows: 70px 70px 70px 70px;
+                grid-template-columns: 3fr 3fr ;	
+                grid-template-areas:
+                    "label1 elem1"
+                    "label2 elem2"
+                    "label3 elem3"
+                    "label4 elem4" 
+                    "label5 elem5" 
+            }
+            article span     {
+                font-family:fantasy;
+                font-size:18px  
+            }  
+  .labeltitulo1 {
+                grid-area: label1;   
+                }
+  .labelelemento1 {
+                grid-area: elem1;    }
+   .labeltitulo2 {
+                grid-area: label2;    }
+  .labelelemento2 {
+                grid-area: elem2;    }
+   .labeltitulo3 {
+                grid-area: label3;    }
+  .labelelemento3 {
+                grid-area: elem3;    }
+   .labeltitulo4 {
+                grid-area: label4;    }
+  .labelelemento4 {
+                grid-area: elem4;    }
+    .labeltitulo5 {
+                grid-area: label5;    }
+  .labelelemento5 {
+                grid-area: elem5;   
+                margin-top:10px;
+                 
+  }
+/* Plantilla*/
+            body {
+                text-align: center;
+                background-image: url("cesped.jpg") ;
+                background-repeat: no-repeat;
+            }
+            .container{
+                display:  grid   ;
+                grid-gap:10px; 
+                grid-template-rows: 120px 70px auto 40px;
+                grid-template-columns:  0.5fr 2fr 3fr 2fr 0.5fr;	
+                grid-template-areas:
+                    "head head head head head"
+                    ". .  col2 . ."
+                    ". col1 col1 col3 . " 
+                    "col4 col4 col4 col4 col4" 
+            }
+            .header {
+                grid-area: head;
+                background-image: url("elicoptero.gif");
+                background-repeat: no-repeat;  
+                background-position-y:  -9 px;
+                background-position-x:   10px; 
+                background-clip: content-box; 
+                background-size: 20%;
+                border: #ffffff solid thin;
+                border: 1px solid #999999;
+                padding: 20px;
+                color: white;
+                background-color: rgba(119, 126, 134, 0.75);
+            }
+            .columna1{
+                grid-area: col1;
+                background-size: 90%;
+                border: #ffffff solid thin;
+                background-color: red;
+                background: #e9e9eb;
+                border: 1px solid #999999;
+                padding: 20px;
+                background-color: rgba(119, 126, 134, 0.75);
+            }
+            .columna2{
+                grid-area: col2;
+                background-size: 90%;
+                background-color: darkorange;
+                background: yellowgreen;
+                border: 1px solid #999999;
+                padding: 10px;
+                background-color: rgba(119, 126, 134, 0.75);
+            }
+            .columna3{
+                grid-area: col3;
+                background-size: 90%;
+                border: #ffffff solid thin;
+                background-color: cyan;
+                background: #f8f8fb;
+                border: 1px solid #999999;
+                padding: 20px;
+                background-color: rgba(119, 126, 134, 0.75);
+            }
+            .columna4{
+                grid-area: col4;
+                background-size: 90%;
+                border: #ffffff solid thin;
+                background-color: cyan;
+                background: #ffffff;
+                border: 1px solid #999999;
+                padding: 20px;
+                background-color: rgba(119, 126, 134, 0.75);
+            }
+            table{
+                color:white;
+            }
+
+            .cajainferior{
+                margin: 100px;
+            }
+            li{display:inline; margin-right: 10px;font-family: fantasy ; font-size: 18px;}
+
+            @media (max-width: 400px) {
+                .container {
+                    display: block;
+                    width:100%
+                }
+                div div{border : cadetblue solid medium;
+                        margin-bottom: 20px
+                }
+                li {
+                    display: block;
+                    text-align: left;
+                }
+ 
+            }
